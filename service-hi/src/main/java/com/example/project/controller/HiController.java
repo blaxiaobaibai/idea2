@@ -7,5 +7,6 @@ public class HiController {
     private String sex;
     private String dree;
     public int map;
-    private Char a;
+    private char a;
+    private char av;
 }
