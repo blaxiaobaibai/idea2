@@ -4,4 +4,5 @@ public class HiController {
     private String name;
     private  int id;
     private String sex;
+    public int map;
 }
