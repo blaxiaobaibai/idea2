@@ -5,5 +5,6 @@ public class HiController {
     private  int id;
     private int tell;
     private String sex;
+    private String dree;
     public int map;
 }
