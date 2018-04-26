@@ -9,4 +9,5 @@ public class HiService {
     }
   public void xinxi(){
   }
+   public void birthday(){}
 }
