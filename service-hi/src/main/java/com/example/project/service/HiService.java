@@ -9,6 +9,7 @@ public class HiService {
     Double xiaoshu;
     }
   public void xinxi(){
+      int b;
   }
    public void birthday(){}
 }
