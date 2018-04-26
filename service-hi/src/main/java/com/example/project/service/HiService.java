@@ -5,6 +5,7 @@ public class HiService {
     String b="张三";
         int a=10;
         Boolean t;
+    Double xiaoshu;
     }
   public void xinxi(){
   }
