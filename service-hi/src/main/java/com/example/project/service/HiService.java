@@ -4,6 +4,7 @@ public class HiService {
     public  void name(){
     String b="张三";
         int a=10;
+        Boolean t;
     }
   public void xinxi(){
   }
