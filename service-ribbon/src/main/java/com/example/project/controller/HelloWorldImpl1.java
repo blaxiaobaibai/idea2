@@ -8,11 +8,9 @@ public class HelloWorldImpl1 implements HelloWorld{
 
     @Override
     public String printHelloWorld(String name,int id) {
-        try {
-            int i=1/0;
-        }catch (Exception e){
-            System.out.println("这是一场");
-        }
+            //下为测试异常
+            //int i=1/0;
+
         String s = null;
        // System.out.println(s.substring(0,3));
         System.out.println("********** HelloWorldImpl1.printHelloWorld()"+"参数name:"+name+"参数id"+id);

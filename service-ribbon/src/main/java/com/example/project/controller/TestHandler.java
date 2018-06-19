@@ -3,22 +3,31 @@ package com.example.project.controller;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-
+import org.springframework.stereotype.Component;
 
 
 import java.util.Arrays;
 
-/*@Aspect()
-@Component*/
+@Aspect()
+@Component
 public class TestHandler {
     @Around("execution(* com.example.project.controller.HelloWorldImpl1.printHelloWorld*(..))")
     public Object process(ProceedingJoinPoint point) throws Throwable {
+        String className = null;
+        int index = 1;
         System.out.println("@Around：执行目标方法之前...");
         //访问目标方法的参数：
         Object[] args = point.getArgs();
+        String rs ="";
+        System.out.println("rs++"+ Arrays.asList(args[1].getClass().getName()));
         if (args != null && args.length > 0 && args[0].getClass() == String.class) {
             args[0] = "改变后的参数1";
         }
+        for (Object arg: args
+                ) {
+            rs=rs+arg.getClass().getName()+",";
+        }
+        System.out.println("rs++"+rs);
         //用改变后的参数执行目标方法
         Object returnValue = point.proceed(args);
         System.out.println("@Around：执行目标方法之后...");
@@ -57,9 +66,10 @@ public class TestHandler {
      * 异常通知：目标方法发生异常的时候执行以下代码
      */
     @AfterThrowing(value="execution(* com.example.project.controller.*.*(..))",throwing="e")
-    public void afterThorwingMethod(JoinPoint jp, NullPointerException e){
+    public void afterThorwingMethod(JoinPoint jp, Exception e){
         String methodName = jp.getSignature().getName();
         System.out.println("【异常通知】the method 【" + methodName + "】 occurs exception: " + e);
+        System.out.println("异常通知结束");
     }
 
 //  /**

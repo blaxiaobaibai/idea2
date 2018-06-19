@@ -3,13 +3,16 @@ package com.example.project.controller;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
-
-/*@Aspect*/
-
+/*
+@Aspect
+@Component*/
+@EnableAspectJAutoProxy
 public class AdviceTest implements Ordered {
     @Around("execution(* com.example.project.controller..*.*(..))")
     public Object process(ProceedingJoinPoint point) throws Throwable {

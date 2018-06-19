@@ -14,15 +14,15 @@ import java.util.Arrays;
 public class LogHandler {
     public void LogBefore()
     {
-        System.out.print("++++++++++日志logBefore方法前");
-        System.out.println("Log before method");
+        System.out.print("+++++++LogHandler xml设置++++++++++日志logBefore方法前");
+        System.out.println("+++++++++++++++++++++++++++Log before method");
     }
 
     public void LogAfter(JoinPoint jp)
     {
         String methodName = jp.getSignature().getName();
-        System.out.print("++++++++日志logBefore方法后");
-        System.out.print("Log after method");
+        System.out.print("+++LogHandler xml设置+++++日志LogAfter方法后");
+        System.out.print("++++++++++Log after method");
         //访问目标方法的参数：
 
             System.out.println("参数啊："+methodName+"||"+Arrays.asList(jp.getArgs()));

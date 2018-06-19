@@ -9,7 +9,9 @@
     <bean id="logHandler" class="com.example.project.controller.LogHandler" />
     <bean id="testHandler" class="com.example.project.controller.TestHandler" />
     <bean id="adviceTest" class="com.example.project.controller.AdviceTest" />
+<!--
     <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator"/>
+-->
     <!-- 启动@AspectJ支持 -->
     <aop:aspectj-autoproxy proxy-target-class="true"/>
     <aop:config>

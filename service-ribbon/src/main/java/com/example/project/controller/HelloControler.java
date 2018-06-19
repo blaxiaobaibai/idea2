@@ -21,7 +21,7 @@ public class HelloControler {
                 new ClassPathXmlApplicationContext("aop.xml");
 
         HelloWorld hw1 = (HelloWorld)ctx.getBean("helloWorldImpl1");
-        HelloWorld hw2 = (HelloWorld)ctx.getBean("helloWorldImpl2");
+        //HelloWorld hw2 = (HelloWorld)ctx.getBean("helloWorldImpl2");
         hw1.printHelloWorld("lsf",1);
         System.out.println("——————————这是断点——————————————");
         //hw1.doPrint("lsf2",2);
