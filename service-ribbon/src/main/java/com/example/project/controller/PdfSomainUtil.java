@@ -219,26 +219,9 @@ public static void main(String[] args) {
     try {
         //DownloadPdf();
         druidTest();
-        List<HiController> list=new ArrayList<>();
-        for (int i=0;i<3;i++){
-            HiController hiController=new HiController();
-            hiController.setId(i);
-            hiController.setA('c');
-            hiController.setName("这是名字几："+i);
-            list.add(hiController);
-        }
-        String str=JSON.toJSONString(list, SerializerFeature.WriteDateUseDateFormat);
-        System.out.println(str);
-        JSONArray jsonArray =JSON.parseArray(str);
-        for(int i=0;i<jsonArray.size();i++){
-            System.out.println(jsonArray.get(i));
-            String s=JSON.toJSONString(jsonArray.get(i), SerializerFeature.WriteDateUseDateFormat);
-            JSONObject json = new JSONObject(s);
-            System.out.println(json.get("name"));
-        }
-
         System.out.println("分隔符");
-        System.out.println(jsonArray);
+        PdfTableBean pdf=new PdfTableBean();
+        //pdf
 
         Double a=-1.333;
         Integer aa=-1;
