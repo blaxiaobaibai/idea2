@@ -19,6 +19,7 @@ public class LoginController {
 
        String s=EncoderByMd5("123456qqq");
        System.out.println(s);
+       System.out.println("dev分支");
 
    }
     public static String EncoderByMd5(String str) throws UnsupportedEncodingException, NoSuchAlgorithmException {
